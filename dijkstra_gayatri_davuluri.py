@@ -90,7 +90,7 @@ optimal_path, exploration = generate_graph(start_node, goal_node)
 
 # Visualization
 fig, ax = plt.subplots(figsize=(10, 5))
-ax.imshow(cv2.cvtColor(map_canvas, cv2.COLOR_BGR2RGB))  
+ax.imshow(cv2.cvtColor(map_canvas, cv2.COLOR_BGR2RGB), extent=[0, MAP_WIDTH, 0, MAP_HEIGHT])  # Set extent for (0,0) as left lower corner
 exploration_step_size = 10000  
 
 def animate(i):
