@@ -127,7 +127,7 @@ if __name__ == "__main__":
         # Visualize goal node in blue
         ax.scatter(goal_node[0], goal_node[1], color='blue', marker='o', s=50, label='Goal')
     
-    total_frames = len(exploration) // exploration_step_size  # Total frames calculation
+    total_frames = len(exploration) // exploration_step_size + (2 if optimal_path else 1) # Total frames calculation
 
     ani = FuncAnimation(fig, animate, frames=total_frames, interval=0, repeat=False)
 
