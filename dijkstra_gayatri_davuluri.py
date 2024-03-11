@@ -131,4 +131,7 @@ if __name__ == "__main__":
 
     ani = FuncAnimation(fig, animate, frames=total_frames, interval=0, repeat=False)
 
+    # Print Optimal Path
+    print("Optimal Path:", optimal_path)
+
     plt.show()
